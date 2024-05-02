@@ -25,6 +25,7 @@ export default {
   text-align: center;
   padding: 100px 0;
   grid-column: span 2;
+
   font-size: 3rem;
 }
 .hero-btn {

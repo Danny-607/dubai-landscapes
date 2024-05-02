@@ -27,7 +27,7 @@ import logo from '@/assets/logo.jpeg'
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-rows: 125px 400px 400px 400px 400px 400px 400px;
+  grid-template-rows: 125px 450px 450px 450px 450px 450px;
   grid-template-columns: 1fr 1fr;
 }
 header {
