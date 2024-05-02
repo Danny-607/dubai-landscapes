@@ -1,15 +1,17 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <h1>About View</h1>
+    <!-- Your content goes here -->
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+<script>
+export default {
+  name: 'AboutView'
+  // Your component options go here
 }
+</script>
+
+<style scoped>
+/* Your component styles go here */
 </style>

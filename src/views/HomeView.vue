@@ -1,9 +1,16 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+<template>
+  <HeroComponent header="UAE's Largest Landscapers" />
+</template>
+
+<script>
+import HeroComponent from '@/components/HeroComponent.vue'
+
+export default {
+  name: 'HomeView',
+  components: {
+    HeroComponent
+  }
+}
 </script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
+<style scoped></style>
