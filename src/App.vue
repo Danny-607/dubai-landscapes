@@ -10,7 +10,7 @@ import logo from '@/assets/logo.jpeg'
         <RouterLink to="/"><img :src="logo" alt="Logo image" /></RouterLink>
       </div>
       <div class="right">
-        <RouterLink to="/about">Services</RouterLink>
+        <RouterLink to="/services">Services</RouterLink>
         <RouterLink to="/contact">FAQ</RouterLink>
         <router-link to="/gallery">Gallery</router-link>
         <router-link to="/contact">Contact</router-link>
@@ -27,7 +27,8 @@ import logo from '@/assets/logo.jpeg'
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-rows: 125px 450px 450px 450px 450px 450px;
+
+  grid-template-rows: 15vh auto;
   grid-template-columns: 1fr 1fr;
 }
 header {
