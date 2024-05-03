@@ -1,23 +1,9 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import logo from '@/assets/logo.jpeg'
+import NavbarComponent from './components/NavbarComponent.vue'
 </script>
 
 <template>
-  <header>
-    <nav>
-      <div class="left">
-        <RouterLink to="/"><img :src="logo" alt="Logo image" /></RouterLink>
-      </div>
-      <div class="right">
-        <RouterLink to="/services">Services</RouterLink>
-        <RouterLink to="/faq">FAQ</RouterLink>
-        <router-link to="/gallery">Gallery</router-link>
-        <router-link to="/contact">Contact</router-link>
-      </div>
-    </nav>
-  </header>
-
+  <NavbarComponent />
   <RouterView />
 </template>
 
@@ -29,31 +15,5 @@ import logo from '@/assets/logo.jpeg'
   display: grid;
   grid-template-rows: 15vh auto;
   grid-template-columns: 1fr 1fr;
-}
-header {
-  grid-row: 1;
-  grid-column: span 3;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #f5f1d6;
-  color: white;
-  width: 100%;
-  height: 15vh;
-}
-nav img {
-  width: 125px;
-  height: 15vh;
-}
-a {
-  text-decoration: none;
-  color: #4b4632;
-}
-.right a {
-  margin-left: 1rem;
-  font-size: 2rem;
 }
 </style>
