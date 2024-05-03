@@ -2,7 +2,7 @@
   <section class="hero">
     <h2>{{ header }}</h2>
 
-    <button class="hero-btn">Our Services</button>
+    <button class="hero-btn"><router-link to="/services">Our Services</router-link></button>
     <button class="hero-btn"><router-link to="/contact">Contact Us</router-link></button>
   </section>
 
@@ -39,5 +39,9 @@ export default {
   border: none;
   cursor: pointer;
   border-radius: 5px;
+}
+a {
+  text-decoration: none;
+  color: #4b4632;
 }
 </style>
