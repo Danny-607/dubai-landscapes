@@ -21,7 +21,7 @@
       <textarea id="message" name="message" required></textarea>
       <button type="submit">Send</button>
     </form>
-    <p></p>
+    <p>Phone number: 1234567890</p>
   </div>
 </template>
 
@@ -46,7 +46,7 @@ export default {
   height: 85vh;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 .right {
   grid-column: 2;
@@ -68,7 +68,7 @@ h1 {
 }
 label {
   margin-bottom: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 input {
@@ -94,5 +94,8 @@ button[type='submit'] {
 
 button[type='submit']:hover {
   background-color: #6b653e;
+}
+p {
+  font-size: 1.3rem;
 }
 </style>

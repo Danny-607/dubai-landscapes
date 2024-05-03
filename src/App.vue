@@ -11,7 +11,7 @@ import logo from '@/assets/logo.jpeg'
       </div>
       <div class="right">
         <RouterLink to="/services">Services</RouterLink>
-        <RouterLink to="/contact">FAQ</RouterLink>
+        <RouterLink to="/faq">FAQ</RouterLink>
         <router-link to="/gallery">Gallery</router-link>
         <router-link to="/contact">Contact</router-link>
       </div>
@@ -27,7 +27,6 @@ import logo from '@/assets/logo.jpeg'
   margin: 0;
   padding: 0;
   display: grid;
-
   grid-template-rows: 15vh auto;
   grid-template-columns: 1fr 1fr;
 }
@@ -43,10 +42,11 @@ nav {
   background-color: #f5f1d6;
   color: white;
   width: 100%;
+  height: 15vh;
 }
 nav img {
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 15vh;
 }
 a {
   text-decoration: none;
