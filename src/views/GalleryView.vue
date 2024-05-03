@@ -1,8 +1,17 @@
 <template>
-  <h1>Our Projects:</h1>
-  <div class="container">
+  <section class="header">
+    <h1>Our Projects:</h1>
+    <p>
+      Over the years, the team here at Dubai-Landscapes has worked on a whole host of projects
+      throughout the UAE, helping to enhance the outdoor space of numerous clients in the region.
+      While we could tell you about our best work, we thought it would be better to show you
+      instead. On this page, you’ll find our projects gallery where you can browse through some of
+      our recent projects.
+    </p>
+  </section>
+  <section class="gallery">
     <GalleryImage v-for="image in images" :key="image.id" :image="image.url" :alt="image.alt" />
-  </div>
+  </section>
 </template>
 
 <script>
@@ -38,7 +47,7 @@ export default {
         { id: 21, url: 'src/assets/IMG_9700.jpg', alt: 'Placeholder image 1' },
         { id: 22, url: 'src/assets/IMG_9725.jpg', alt: 'Placeholder image 2' },
         { id: 23, url: 'src/assets/IMG_9772.jpg', alt: 'Placeholder image 3' },
-        { id: 24, url: 'src/assets/IMG_9804.JPG', alt: 'Placeholder image 3' },
+        { id: 24, url: 'src/assets/IMG_9804.jpg', alt: 'Placeholder image 3' },
         { id: 25, url: 'src/assets/016A3298.jpg', alt: 'Placeholder image 3' }
       ]
     }
@@ -52,13 +61,33 @@ export default {
 img {
   width: 30vw;
   height: 40vh;
-  margin: 0 auto;
+  margin: 20px auto;
 }
-.container {
+.gallery {
   grid-row: 3;
   grid-column: span 2;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+.header {
+  grid-column: span 2;
+  text-align: center;
+  background-color: #4b4632;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+h1 {
+  font-size: 4rem;
+
+  font-weight: bold;
+  margin: 10px 0;
+  text-decoration: underline;
+}
+p {
+  font-size: 2rem;
+  width: 85%;
 }
 </style>

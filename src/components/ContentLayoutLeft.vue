@@ -1,9 +1,16 @@
 <template>
   <section class="left-content">
-    <h2>{{ header }}</h2>
+    <h1>{{ header }}</h1>
+    <ul v-if="items && items.length > 0">
+      <li v-for="(item, index) in items" :key="index">
+        <img v-if="item.svg" :src="item.svg" :alt="svgAlt" />
+
+        {{ item }}
+      </li>
+    </ul>
     <p>{{ paragraph }}</p>
   </section>
-  <img :src="image" alt="" />
+  <img :src="image" :alt="alt" />
 </template>
 
 <script>
@@ -19,6 +26,15 @@ export default {
       required: true
     },
     image: {
+      type: String,
+      required: true
+    },
+    items: {
+      type: Array,
+      default: () => [],
+      required: false
+    },
+    alt: {
       type: String,
       required: true
     }
@@ -39,13 +55,13 @@ img {
   color: white;
   padding: 1rem;
 }
-h2 {
-  font-size: 2rem;
+h1 {
+  font-size: 3rem;
   font-weight: bold;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 300;
   line-height: 1.5;
   margin-bottom: 2rem;

@@ -2,6 +2,12 @@
   <img :src="image" alt="" />
   <section class="right-content">
     <h2>{{ header }}</h2>
+    <ul v-if="items && items.length > 0">
+      <li v-for="(item, index) in items" :key="index">
+        <img class="svg" v-if="item.svg" :src="item.svg" :alt="svgAlt" />
+        {{ item.text }}
+      </li>
+    </ul>
     <p>{{ paragraph }}</p>
   </section>
 </template>
@@ -19,6 +25,15 @@ export default {
       required: true
     },
     image: {
+      type: String,
+      required: true
+    },
+    items: {
+      type: Array,
+      default: () => [],
+      required: false
+    },
+    alt: {
       type: String,
       required: true
     }
@@ -41,14 +56,31 @@ img {
   padding: 1rem;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 300;
   line-height: 1.5;
   margin-bottom: 2rem;
+}
+ul {
+  /* width: 40%; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  height: 75%;
+}
+li {
+  list-style-type: none;
+  font-size: 3rem;
+  width: 50%;
+}
+.svg {
+  width: 40px;
+  height: 40px;
 }
 </style>
