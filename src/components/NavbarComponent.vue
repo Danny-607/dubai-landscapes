@@ -61,14 +61,21 @@ a {
 .right a {
   margin-left: 1rem;
   font-size: 2rem;
+  text-decoration: underline;
 }
-
+.left {
+  width: 100%;
+}
+a:hover {
+  color: #1b7000;
+}
 @media (max-width: 768px) {
   .right {
     display: none;
   }
-  .left {
-    display: none;
+
+  header {
+    width: 100%;
   }
 }
 </style>
