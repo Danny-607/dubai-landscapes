@@ -1,11 +1,7 @@
 <template>
   <div>
-    <button class="hamburger" @click="toggleMenu">☰</button>
-    <div
-      class="menu"
-      v-if="isOpen"
-      :style="{ transform: isOpen ? 'translateY(0)' : 'translateY(-100%)' }"
-    >
+    <button class="hamburger" :class="{ active: isOpen }" @click="toggleMenu">☰</button>
+    <div class="menu" v-if="isOpen">
       <RouterLink class="menu-item" to="/" @click="closeMenu">Home</RouterLink>
       <RouterLink class="menu-item" to="/services" @click="closeMenu">Services</RouterLink>
       <RouterLink class="menu-item" to="/faq" @click="closeMenu">FAQ</RouterLink>
@@ -40,14 +36,20 @@ export default {
 <style scoped>
 .hamburger {
   display: none;
-  background: none;
+  background-color: grey;
+  color: white;
   border: none;
+  border-radius: 5px;
   font-size: 30px;
   cursor: pointer;
   z-index: 100; /* Make sure the hamburger is above other content */
-  position: relative; /* Ensures that the button is clickable and positioned correctly */
+  position: absolute;
+  top: 45px;
+  right: 50px;
 }
-
+.hamburger.active {
+  position: fixed;
+}
 .menu {
   display: flex;
   justify-content: center;
@@ -61,8 +63,6 @@ export default {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   border: none;
-  transform: translateY(-100%); /* Start above the screen */
-  transition: transform 0.5s ease; /* Smooth transition for descending */
   z-index: 99; /* High z-index to overlay on the rest of the page */
 }
 
