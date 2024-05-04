@@ -21,7 +21,7 @@
       <textarea id="message" name="message" required></textarea>
       <button type="submit">Send</button>
     </form>
-    <p><img class="svg" src="@/assets/phone.svg" alt="" /> Phone number: 1234567890</p>
+    <p><img class="svg" src="/images/phone.svg" alt="" /> Phone number: 1234567890</p>
   </div>
 </template>
 
