@@ -83,4 +83,25 @@ li {
   width: 40px;
   height: 40px;
 }
+
+@media (max-width: 768px) {
+  img {
+    height: 300px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  ul {
+    height: fit-content;
+    justify-content: space-around;
+  }
+  li {
+    font-size: 1rem;
+  }
+}
 </style>

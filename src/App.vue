@@ -16,4 +16,10 @@ import NavbarComponent from './components/NavbarComponent.vue'
   grid-template-rows: 15vh auto;
   grid-template-columns: 1fr 1fr;
 }
+
+@media (max-width: 768px) {
+  #app {
+    display: block;
+  }
+}
 </style>
