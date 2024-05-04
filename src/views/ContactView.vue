@@ -21,7 +21,7 @@
       <textarea id="message" name="message" required></textarea>
       <button type="submit">Send</button>
     </form>
-    <p>Phone number: 1234567890</p>
+    <p><img class="svg" src="@/assets/phone.svg" alt="" /> Phone number: 1234567890</p>
   </div>
 </template>
 
@@ -55,7 +55,10 @@ export default {
   color: white;
   padding: 1rem;
 }
-
+.svg {
+  width: 30px;
+  height: 30px;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -97,5 +100,15 @@ button[type='submit']:hover {
 }
 p {
   font-size: 1.3rem;
+}
+
+.right p {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .left {
+    display: none;
+  }
 }
 </style>

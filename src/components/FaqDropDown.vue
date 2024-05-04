@@ -47,11 +47,15 @@ export default {
   text-align: left;
   border: none;
   cursor: pointer;
+  border-radius: 10px;
+  font-size: 1rem;
 }
 .faq-answer {
   padding: 1rem;
+  font-size: 1rem;
   background-color: #f0f0f0;
   width: 100%;
   color: black;
+  border-radius: 10px;
 }
 </style>

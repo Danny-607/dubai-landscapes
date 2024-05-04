@@ -12,10 +12,25 @@
     </p>
   </section>
   <div class="back-drop">
-    <FaqDropDown question="What is the meaning of life?" answer="42" />
     <FaqDropDown
-      question="What is the airspeed velocity of an unladen swallow?"
-      answer="African or European?"
+      question="Example question 1"
+      answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec"
+    />
+    <FaqDropDown
+      question="Example question 2"
+      answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec"
+    />
+    <FaqDropDown
+      question="Example question 3"
+      answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec"
+    />
+    <FaqDropDown
+      question="Example question 4"
+      answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec"
+    />
+    <FaqDropDown
+      question="Example question 5"
+      answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec"
     />
   </div>
 </template>
@@ -41,7 +56,7 @@ export default {
 .back-drop {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 1rem;
-  width: 80%;
+  width: 100%;
   border-radius: 5px;
   color: white;
   grid-column: span 2;
@@ -50,5 +65,10 @@ export default {
   align-items: center;
   justify-content: center;
   justify-self: center;
+}
+@media (max-width: 768px) {
+  .information {
+    font-size: 1rem;
+  }
 }
 </style>
