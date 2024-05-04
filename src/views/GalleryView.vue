@@ -1,6 +1,6 @@
 <template>
   <section class="header">
-    <h1>Our Projects:</h1>
+    <h1>Our Projects</h1>
     <p>
       Over the years, the team here at Dubai-Landscapes has worked on a whole host of projects
       throughout the UAE, helping to enhance the outdoor space of numerous clients in the region.
@@ -58,11 +58,6 @@ export default {
 </script>
 
 <style scoped>
-img {
-  width: 30vw;
-  height: 40vh;
-  margin: 20px auto;
-}
 .gallery {
   grid-row: 3;
   grid-column: span 2;
@@ -89,5 +84,14 @@ h1 {
 p {
   font-size: 2rem;
   width: 85%;
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
 }
 </style>

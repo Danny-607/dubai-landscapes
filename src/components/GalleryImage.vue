@@ -19,5 +19,15 @@ export default {
 </script>
 
 <style scoped>
-/* Your component's CSS styles go here */
+img {
+  object-fit: cover;
+  width: 30vw;
+  height: 40vh;
+  margin: 20px auto;
+}
+@media (max-width: 768px) {
+  img {
+    width: 100vw;
+  }
+}
 </style>
