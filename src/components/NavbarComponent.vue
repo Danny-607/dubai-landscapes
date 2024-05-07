@@ -1,11 +1,19 @@
 <template>
+  <!-- Header section containing navigation -->
   <header>
     <nav>
+      <!-- HamburgerMenu component for mobile navigation -->
       <HamburgerMenu />
+      <!-- Left section of the navigation -->
       <div class="left">
-        <RouterLink :to="{ name: 'home' }"><img :src="logo" alt="Logo image" /></RouterLink>
+        <!-- RouterLink to navigate to the home page -->
+        <RouterLink :to="{ name: 'home' }"
+          ><img :src="logo" alt="Ai generated logo image"
+        /></RouterLink>
       </div>
+      <!-- Right section of the navigation -->
       <div class="right">
+        <!-- RouterLinks for navigation to different pages -->
         <RouterLink :to="{ name: 'services' }">Services</RouterLink>
         <RouterLink :to="{ name: 'faq' }">FAQ</RouterLink>
         <router-link :to="{ name: 'gallery' }">Gallery</router-link>
@@ -35,6 +43,7 @@ export default {
 </script>
 
 <style scoped>
+/* Scoped styles for the NavbarComponent */
 header {
   grid-row: 1;
   grid-column: span 3;
@@ -69,6 +78,7 @@ a {
 a:hover {
   color: #1b7000;
 }
+/* Media query for responsiveness */
 @media (max-width: 768px) {
   .right {
     display: none;

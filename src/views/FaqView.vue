@@ -1,4 +1,5 @@
 <template>
+  <!-- Hero component displaying the header for the FAQ section -->
   <hero-component header="FAQ" />
   <section class="information">
     <h1>Answering your questions!</h1>
@@ -12,6 +13,7 @@
     </p>
   </section>
   <div class="back-drop">
+    <!-- Rendering FaqDropDown component for each FAQ -->
     <FaqDropDown
       question="Example question 1"
       answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec"
@@ -37,6 +39,7 @@
 
 <script>
 import FaqDropDown from '@/components/FaqDropDown.vue'
+
 export default {
   name: 'FaqView',
   components: {
@@ -46,6 +49,7 @@ export default {
 </script>
 
 <style scoped>
+/* Scoped styles for the FaqView component */
 .information {
   padding: 1rem;
   grid-column: 1 / span 2;
@@ -66,6 +70,7 @@ export default {
   justify-content: center;
   justify-self: center;
 }
+/* Media query for responsiveness */
 @media (max-width: 768px) {
   .information {
     font-size: 1rem;

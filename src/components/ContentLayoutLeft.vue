@@ -1,22 +1,30 @@
 <template>
+  <!-- Left content section -->
   <section class="left-content">
+    <!-- Header -->
     <h2>{{ header }}</h2>
+    <!-- List of items -->
     <ul v-if="items && items.length > 0">
+      <!-- Iterate through items -->
       <li v-for="(item, index) in items" :key="index">
+        <!-- Optional SVG icon -->
         <img v-if="item.svg" :src="item.svg" :alt="svgAlt" />
-
+        <!-- Item text -->
         {{ item }}
       </li>
     </ul>
+    <!-- Paragraph -->
     <p>{{ paragraph }}</p>
   </section>
+  <!-- Image section -->
   <img :src="image" :alt="alt" />
 </template>
 
 <script>
 export default {
-  name: 'ContentLayoutLeft',
+  name: 'ContentLayoutLeft', // Component name
   props: {
+    // Props for header, paragraph, image, and items
     header: {
       type: String,
       required: true

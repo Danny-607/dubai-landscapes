@@ -1,7 +1,9 @@
 <template>
-  <!-- faq drop down menu -->
+  <!-- FAQ drop down menu -->
   <div class="faq-item">
+    <!-- Button to toggle visibility of answer -->
     <button class="faq-btn" @click="toggleVisibility">{{ question }}</button>
+    <!-- Answer section, shown when isVisible is true -->
     <div v-if="isVisible" class="faq-answer">
       <p>{{ answer }}</p>
     </div>
@@ -10,25 +12,27 @@
 
 <script>
 export default {
-  name: 'FaqDropDown',
+  name: 'FaqDropDown', // Component name
   props: {
+    // Props for question and answer text
     question: {
-      type: String,
-      required: true
+      type: String, // Type validation for question
+      required: true // Question is required
     },
     answer: {
-      type: String,
-      required: true
+      type: String, // Type validation for answer
+      required: true // Answer is required
     }
   },
   data() {
     return {
-      isVisible: false
+      isVisible: false // Initial visibility state
     }
   },
   methods: {
+    // Method to toggle visibility of answer
     toggleVisibility() {
-      this.isVisible = !this.isVisible
+      this.isVisible = !this.isVisible // Toggle isVisible state
     }
   },
   mounted() {}

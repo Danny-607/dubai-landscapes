@@ -1,7 +1,11 @@
 <template>
+  <!-- Hamburger menu component -->
   <div>
+    <!-- Hamburger button -->
     <button class="hamburger" :class="{ active: isOpen }" @click="toggleMenu">☰</button>
+    <!-- Menu items -->
     <div class="menu" v-if="isOpen">
+      <!-- RouterLinks for navigation -->
       <RouterLink class="menu-item" to="/" @click="closeMenu">Home</RouterLink>
       <RouterLink class="menu-item" to="/services" @click="closeMenu">Services</RouterLink>
       <RouterLink class="menu-item" to="/faq" @click="closeMenu">FAQ</RouterLink>
@@ -19,13 +23,15 @@ export default {
   },
   data() {
     return {
-      isOpen: false
+      isOpen: false // Flag for toggling the menu
     }
   },
   methods: {
+    // Method to toggle the menu visibility
     toggleMenu() {
       this.isOpen = !this.isOpen
     },
+    // Method to close the menu when a link is clicked
     closeMenu() {
       this.isOpen = false
     }
@@ -34,6 +40,7 @@ export default {
 </script>
 
 <style scoped>
+/* Scoped styles for the HamburgerMenu component */
 .hamburger {
   display: none;
   background-color: grey;
@@ -42,14 +49,18 @@ export default {
   border-radius: 5px;
   font-size: 30px;
   cursor: pointer;
-  z-index: 100; /* Make sure the hamburger is above other content */
+  z-index: 100; /* Ensure the hamburger is above other content */
   position: absolute;
   top: 45px;
   right: 50px;
 }
+
+/* Styling for active hamburger button */
 .hamburger.active {
   position: fixed;
 }
+
+/* Styling for the menu */
 .menu {
   display: flex;
   justify-content: center;
@@ -63,9 +74,10 @@ export default {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   border: none;
-  z-index: 99; /* High z-index to overlay on the rest of the page */
+  z-index: 99; /* Ensure high z-index to overlay on the rest of the page */
 }
 
+/* Styling for menu items */
 .menu-item {
   padding: 10px;
   text-decoration: none;
@@ -74,11 +86,14 @@ export default {
   font-size: 3rem;
 }
 
+/* Hover effect for menu items */
 .menu-item:hover {
   background-color: #f0f0f0;
 }
 
+/* Media query for responsive design */
 @media (max-width: 768px) {
+  /* Display hamburger button on small screens */
   .hamburger {
     display: block;
   }

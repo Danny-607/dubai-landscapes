@@ -1,4 +1,5 @@
 <template>
+  <!-- Header section displaying the title and description of the gallery -->
   <section class="header">
     <h1>Our Projects</h1>
     <p>
@@ -9,13 +10,16 @@
       our recent projects.
     </p>
   </section>
+  <!-- Gallery section displaying images -->
   <section class="gallery">
+    <!-- Rendering GalleryImage component for each image in the images array -->
     <GalleryImage v-for="image in images" :key="image.id" :image="image.url" :alt="image.alt" />
   </section>
 </template>
 
 <script>
 import GalleryImage from '@/components/GalleryImage.vue'
+
 export default {
   name: 'GalleryView',
   components: {
@@ -23,7 +27,9 @@ export default {
   },
   data() {
     return {
+      // Array of image objects with id, url, and alt attributes
       images: [
+        // Sample image objects
         { id: 1, url: '/images/016A3060.jpg', alt: 'Placeholder image 1' },
         { id: 2, url: '/images/016A3065.jpg', alt: 'Placeholder image 2' },
         { id: 3, url: '/images/016A3170.jpg', alt: 'Placeholder image 3' },
@@ -58,6 +64,7 @@ export default {
 </script>
 
 <style scoped>
+/* Scoped styles for the GalleryView component */
 .gallery {
   grid-row: 3;
   grid-column: span 2;
@@ -76,7 +83,6 @@ export default {
 }
 h1 {
   font-size: 4rem;
-
   font-weight: bold;
   margin: 10px 0;
   text-decoration: underline;
@@ -86,6 +92,7 @@ p {
   width: 85%;
 }
 
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
   p {
     font-size: 1rem;

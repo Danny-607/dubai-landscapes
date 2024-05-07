@@ -1,15 +1,20 @@
 <template>
+  <!-- Hero section with header and buttons -->
   <section class="hero">
+    <!-- Header displayed in the hero section -->
     <h2>{{ header }}</h2>
-
-    <router-link class="hero-btn" to="/services">Our Services</router-link>
-    <router-link class="hero-btn" to="/contact">Contact Us</router-link>
+    <!-- RouterLink for navigating to the services page -->
+    <router-link class="hero-btn" :to="{ name: 'services' }">Our Services</router-link>
+    <!-- RouterLink for navigating to the contact page -->
+    <router-link class="hero-btn" :to="{ name: 'contact' }">Contact Us</router-link>
   </section>
 </template>
 
 <script>
 export default {
+  // Component name
   name: 'HeroComponent',
+  // Props declaration for passing header text
   props: {
     header: String
   }
@@ -17,6 +22,7 @@ export default {
 </script>
 
 <style scoped>
+/* Scoped styles for the HeroComponent */
 .hero {
   background: url('../assets/hero.jpg') no-repeat center center/cover;
   color: #fff;
@@ -47,6 +53,7 @@ a {
   color: #f5f1d6;
 }
 
+/* Media query for responsiveness */
 @media (max-width: 768px) {
   .hero {
     display: none;
