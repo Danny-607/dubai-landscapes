@@ -3,13 +3,13 @@
     <nav>
       <HamburgerMenu />
       <div class="left">
-        <RouterLink to="/"><img :src="logo" alt="Logo image" /></RouterLink>
+        <RouterLink :to="{ name: 'home' }"><img :src="logo" alt="Logo image" /></RouterLink>
       </div>
       <div class="right">
-        <RouterLink to="/services">Services</RouterLink>
-        <RouterLink to="/faq">FAQ</RouterLink>
-        <router-link to="/gallery">Gallery</router-link>
-        <router-link to="/contact">Contact</router-link>
+        <RouterLink :to="{ name: 'services' }">Services</RouterLink>
+        <RouterLink :to="{ name: 'faq' }">FAQ</RouterLink>
+        <router-link :to="{ name: 'gallery' }">Gallery</router-link>
+        <router-link :to="{ name: 'contact' }">Contact</router-link>
       </div>
     </nav>
   </header>

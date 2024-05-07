@@ -88,7 +88,7 @@ textarea {
 button[type='submit'] {
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  background-color: #4b4632;
+  background-color: #a8a191;
   color: white;
   border: none;
   border-radius: 4px;
